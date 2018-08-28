@@ -10,8 +10,8 @@ local CurrentAction             = nil
 local CurrentActionMsg          = ''
 local CurrentActionData         = {}
 local actualZone                = '' -- This variable is basically a duplicate of currentZone, sorry, I was stuck on something.
-local truck						          = 0
-local trailer					          = 0
+local truck	                    = 0
+local trailer                   = 0
 local deliveryblip
 
 Citizen.CreateThread(function()
@@ -242,9 +242,9 @@ Citizen.CreateThread(function()
     if isTaken == 1 and isDelivered == 0 then
     local coords = GetEntityCoords(GetPlayerPed(-1))
       v = alldeliveries[randomdelivery]
-			if (GetDistanceBetweenCoords(coords, v.posx, v.posy, v.posz, true) < Config.DrawDistance) then
+	    if (GetDistanceBetweenCoords(coords, v.posx, v.posy, v.posz, true) < Config.DrawDistance) then
 				DrawMarker(1, v.posx, v.posy, v.posz, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 5.0, 5.0, 1.0, 204, 204, 0, 100, false, false, 2, false, false, false, false)
-			end
+	    end
     end
   end
 end)
